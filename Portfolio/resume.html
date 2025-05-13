@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+    <link rel="stylesheet" href="coloredits.css">
+</head>
+<body>
+	<header>
+		<h1>Laura Arnold</h1>
+		<p><em>Quality Assurance Analyst | Certified</em></p>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="coverletter.html">My cover letter</a></li>
+			<li><a href="thecareergoals.html">My career goals</a></li>
+		</ul>
+	</nav>
+<main>
+        <section>
+            <h2>Experience</h2>
+            <article>
+                <h3>QA Engineer Trainee</h3>
+                <p><strong>Responsibilities:</strong> Knowledge of how to test web apps using HTML, CSS, and JavaScript.</p>
+                <p><em>Duration:</em> May 2024 – Present</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Education</h2>
+            <table border="1">
+                <caption>Academic Background</caption>
+                <tr>
+                    <th>Loyola University Chicago</th>
+                    <th>Bachelors of Arts in Political Science</th>
+                    <th>Minors: Bioethics and Healthcare administration</th>
+                    <th>May 2022</th>
+                </tr>
+                <tr>
+                    <td>Coding Temple</td>
+                    <td>Certificate</td>
+                </tr>
+                <tr>
+                    <td>Quality Assurance</td>
+                    <td>October 2024</td>
+                </tr>
+                <tr>
+            </table>
+        </section>
+
+        <div id="currentDate">April 29th, 2025</div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Laura Arnold</p>
+    </footer>
+
+    <script>
+        const dateDiv = document.getElementById("currentDate");
+        const today = new Date().toDateString();
+        dateDiv.innerHTML = `<span><strong>Date:</strong> ${today}</span>`;
+
+        console.log("Resume page loaded successfully.");
+    </script>
+</body>
+</html>
