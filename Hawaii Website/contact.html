@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <div id="map">Map Placeholder</div>
+
+  <h2>Ask a Question</h2>
+
+  <form id="contactForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="confirmEmail">Confirm Email Address:</label>
+    <input type="email" id="confirmEmail" name="confirmEmail" required>
+
+    <label for="question">Your Question:</label>
+    <textarea id="question" name="question" rows="4" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function(event) {
+      const email = document.getElementById('email').value;
+      const confirmEmail = document.getElementById('confirmEmail').value;
+
+      if (email !== confirmEmail) {
+        alert("Email addresses do not match!");
+        event.preventDefault();
+      }
+    });
+  </script>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="honolulu.html">Honolulu</a></li>
+      <li><a href="hilo.html">Hilo</a></li>
+      <li><a href="ewa_beach.html">Ewa Beach</a></li>
+    </ul>
+  </nav>
+
+  <section class="info-box">
+    <p>Ready to explore paradise? Complete the form to discover what makes Hawaii truly unforgettable!</p>
+    <a href="https://www.gohawaii.com" target="_blank">Visit Hawaii's official tourism site</a>
+  </section>
+
+  <aside class="info-box">
+    <img src="https://s.hdnux.com/photos/01/30/14/71/23121518/3/rawImage.jpg" alt="Cute roaming chicken in Hawaii">
+  </aside>
+
+  <ol>
+    <li>Visit beaches</li>
+    <li>Explore volcanoes</li>
+    <li>Eat poke</li>
+  </ol>
+
+  <ul>
+    <li>Surfing</li>
+    <li>Hiking</li>
+    <li>Snorkeling</li>
+  </ul>
+
+  <table>
+    <tr>
+      <th>City</th>
+      <th>Population</th>
+      <th>Classification</th>
+    </tr>
+    <tr>
+      <td>Honolulu</td>
+      <td>350,964</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <td>Hilo</td>
+      <td>44,186</td>
+      <td>Urban/Rural</td>
+    </tr>
+    <tr>
+      <td>Ewa Beach</td>
+      <td>16,415</td>
+      <td>Suburban</td>
+    </tr>
+  </table>
+
+</body>
+</html>
